@@ -22,7 +22,7 @@ if uploaded_file is not None:
 
     if method == "Simple Thresholding":
         t = st.slider("Threshold Value", 0, 255, 127)
-        _, thresh = cv2.threshold(gray, t, 255, cv2.THRESH_BINARY)
+        _, thresh = cv2.threshold(gray, t, 255, cv2.THRESH_BINARY_INV)
 
     elif method == "Adaptive Thresholding":
         block_size = st.slider("Block Size (odd number)", 3, 51, 11, step=2)
